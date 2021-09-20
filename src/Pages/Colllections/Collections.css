@@ -1,0 +1,15 @@
+   .Create{ 
+    margin: 0 auto;
+    font-size: 40px;
+    padding: 20px 45px;
+    display: flex;
+    border-radius: 20px;
+    cursor: pointer;
+   }
+   .allCollections{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+   

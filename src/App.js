@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import Header from './components/Header/Header'
+import Gallery from './Pages/Gallery/Gallery';
+import Colllections from './Pages/Colllections/Colllections';
+import { BrowserRouter } from 'react-router-dom';
+import { Container } from '@material-ui/core';
+import { Route } from 'react-router-dom';
+import {Switch} from 'react-router-dom';
+import MainNav from './components/MainNav/MainNav'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+        <BrowserRouter>
+    <Header/>
+    <MainNav/>
+    <div className="app">
+     <Container>
+         <Switch>
+           <Route path='/' component={Gallery} exact/>
+           <Route path='/collections' component={Colllections}/>
+           
+         </Switch>
+     </Container>
     </div>
+
+    </BrowserRouter>
+    
   );
 }
 

@@ -1,0 +1,14 @@
+.card{
+max-width: 250px;
+border: 2px solid green;
+min-height: 250px;
+border-radius: 10px;
+text-align: center;
+min-width: 250px;
+margin: 5px;
+}
+
+.clear{
+    float: right;
+    margin: 10px;
+}
