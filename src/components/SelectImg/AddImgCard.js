@@ -14,14 +14,15 @@ function AddImgCard({url,key}) {
     const dispatch = useDispatch();
     const [urls, setUrls] = useState("name")
 
-    const pushvalue=()=>{
-      setUrls(url)
-        dispatch(addTodo(urls))
+  const pushvalue = () => {
+      console.log(url, "myurl");
+      setUrls(url);
+      dispatch(addTodo(url));
     }
     return (
         <>
            <div>
-           <button onClick={pushvalue} >Add</button>
+           <button onClick={() => pushvalue()} >Add</button>
           <Img key={key} src={url} alt="" />
           </div>
         </>

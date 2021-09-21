@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './Collections.css'
 import { SingleColl } from '../../components/Single Collection/SingleColl'
 import SelectImg from '../../components/SelectImg/SelectImg'
@@ -13,8 +14,10 @@ import {Dialog,
 } from '@material-ui/core'
 
 function Colllections() {
-    const [handleModel, sethandleModel] = useState(false)
-    
+    const [handleModel, sethandleModel] = useState(false);
+    const lang = useSelector((state) => state.todoReducers.list)
+    console.log(lang, "lang");
+
     const closeDialog = ()=> {
 
         setcomData((oldItems)=>{

@@ -2,15 +2,16 @@ const initialData = {
     list: []
 }
 
-const todoReducers = (state=initialData, action) =>{
+const todoReducers = (state = initialData, action) => {
+    console.log(action, state);
     switch (action.type){
-        case "ADD_TODO":
-            
+        case "ADDTODO":
+
             const {id, data } = action.payload;
 
-            return{
+            return {
                 ...state,
-                data: [
+                list: [
                     ...state.list,
                     {
                         id:id,
