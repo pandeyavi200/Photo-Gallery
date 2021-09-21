@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import { addTodo } from '../../actions';
+import { useDispatch } from 'react-redux';
 
 const Img = styled.img`
   width: 100%;
@@ -9,10 +11,17 @@ const Img = styled.img`
 
 
 function AddImgCard({url,key}) {
+    const dispatch = useDispatch();
+    const [urls, setUrls] = useState("name")
+
+    const pushvalue=()=>{
+      setUrls(url)
+        dispatch(addTodo(urls))
+    }
     return (
         <>
            <div>
-           <button >Add</button>
+           <button onClick={pushvalue} >Add</button>
           <Img key={key} src={url} alt="" />
           </div>
         </>
