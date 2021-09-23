@@ -36,9 +36,11 @@ const WrapperImages = styled.section`
 function Gallery() {
 
     const [images, setImage] = useState([]);
-
+    // eslint-disable-next-line
     useEffect(() => {
+      
       fetchImages();
+      // eslint-disable-next-line
     }, [])
   
     const fetchImages = (count = 10) => {

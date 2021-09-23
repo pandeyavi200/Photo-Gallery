@@ -19,7 +19,7 @@ function AddImgCard({url,key}) {
       console.log(url, "myurl");
       setUrls(url);
       dispatch(addTodo(url));
-
+      console.log(urls)
     }
     return (
         <>

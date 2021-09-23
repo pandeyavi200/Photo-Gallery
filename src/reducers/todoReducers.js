@@ -23,6 +23,7 @@ const todoReducers = (state = initialData, action) => {
              state=initialData
              console.log(state)
              console.log(state.list.length,"length")
+             break;
         }
         default: return state;
     }

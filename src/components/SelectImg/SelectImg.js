@@ -36,6 +36,7 @@ function SelectImg() {
 
     useEffect(() => {
       fetchImages();
+      // eslint-disable-next-line
     }, [])
   
     const fetchImages = (count = 30) => {
