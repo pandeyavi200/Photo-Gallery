@@ -3,7 +3,7 @@ const initialData = {
 }
 
 const todoReducers = (state = initialData, action) => {
-    console.log(action, state);
+    // console.log(action, state);
     switch (action.type){
         case "ADDTODO":
 
@@ -19,6 +19,11 @@ const todoReducers = (state = initialData, action) => {
                     }
                 ]
             }
+        case "EMPTYSTATE":{
+             state=initialData
+             console.log(state)
+             console.log(state.list.length,"length")
+        }
         default: return state;
     }
 }

@@ -6,9 +6,41 @@ border-radius: 10px;
 text-align: center;
 min-width: 250px;
 margin: 5px;
+cursor: pointer;
 }
 
 .clear{
     float: right;
     margin: 10px;
+    margin-top: 13px;
+    margin-bottom: auto;
+    margin-left: -36px;
+    background: slategrey;
+    color: white;
+    cursor: pointer;
 }
+
+.card-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  h1, h2{
+      color: white;
+      margin: 0px;
+  }
+
+  .hNluLK{
+      margin-top: 0px!important;
+  }
+
+  .heading, .desc{
+      color: black;
+  }
+
+  .dNTeHA{
+      margin-top: 0px!important;
+  }
+
+  section{
+    margin-top: 0px!important;
+  }

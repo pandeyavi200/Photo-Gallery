@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import { addTodo } from '../../actions';
 import { useDispatch } from 'react-redux';
+import './SelectImg.css'
 
 const Img = styled.img`
   width: 100%;
@@ -18,11 +19,12 @@ function AddImgCard({url,key}) {
       console.log(url, "myurl");
       setUrls(url);
       dispatch(addTodo(url));
+
     }
     return (
         <>
            <div>
-           <button onClick={() => pushvalue()} >Add</button>
+           <button className="button1" onClick={() => pushvalue()} >Add</button>
           <Img key={key} src={url} alt="" />
           </div>
         </>

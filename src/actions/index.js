@@ -1,5 +1,4 @@
 export const addTodo = (data) => {
-    console.log(data, "addTodo");
      return {
          type:"ADDTODO",
          payload: {
@@ -8,4 +7,10 @@ export const addTodo = (data) => {
          }
 
      }
+}
+
+export const EmptyState = () => {
+    return {
+        type:"EMPTYSTATE",
+    }
 }
