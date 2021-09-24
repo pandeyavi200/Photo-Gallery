@@ -139,7 +139,7 @@ function Colllections() {
           <input type="submit" className='button1 submit' value="Add"  onClick={handleSubmit}  onKeyUp={keuupfunc} />
           <input type="button" style={{marginLeft:"20px"}} className='button1 submit' value="Close"  onClick={closeDialog}   />
           <div style={{fontSize: "12px", color: "red"}}>{galleryError}</div>
-          <div className="addItems">
+          <div className="addItems" style={{marginTop: "-180px"}}>
           <SelectImg/>
           </div>
 

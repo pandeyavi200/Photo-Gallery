@@ -60,12 +60,13 @@ onClick={() => sethandleModel(true)}
          <DialogTitle>Your Collection</DialogTitle>
            <DialogContent>
                <DialogContentText>
-        
+          <p>Name:</p>
           <h1 className="heading" >{name}</h1>
           <br />
+          <p>Description:</p>
          <h4 className="desc" style={{  wordWrap: "break-word"}} >{desc}</h4>
           <br />
-          <div className="addItems">
+          <div className="addItems" style={{marginTop: "-180px"}}>
           <WrapperImages>
           {image.map(image => (
             <UnsplashImage url={image.data} key={image.id} />
