@@ -8,23 +8,22 @@ const todoReducers = (state = initialData, action) => {
         case "ADDTODO":
 
             const {id, data } = action.payload;
-
+           
             return {
                 ...state,
                 list: [
                     ...state.list,
-                    {
-                        id:id,
+                    {  
+                        id:id, 
                         data:data
+                 
                     }
                 ]
             }
         case "EMPTYSTATE":{
              state=initialData
-             console.log(state)
-             console.log(state.list.length,"length")
-             break;
         }
+        // eslint-disable-next-line
         default: return state;
     }
 }

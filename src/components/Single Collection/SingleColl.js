@@ -30,6 +30,10 @@ export const SingleColl = ({key, id,name,desc,image,onSelect}) => {
     sethandleModel(false)
     };
 
+  //   if(image.length<1){
+  //     image[0].data="https://images.unsplash.com/photo-1630523628239-576bc71b6f69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjEzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzI1MDM1NDU&ixlib=rb-1.2.1&q=80&w=200"
+  // }
+
   return (
     <>
     <div className="cardOverlay">

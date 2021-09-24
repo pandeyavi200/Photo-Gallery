@@ -20,10 +20,10 @@ function Colllections() {
     const dispatch = useDispatch();  
     const closeDialog = ()=> {
 
-        var isValid="false";
-        isValid=validate()
-        console.log(isValid)
-        if(isValid){
+        // var isValid="false";
+        // isValid=validate()
+        // console.log(isValid)
+        // if(isValid){
 
         setcomData((oldItems)=>{
             return [...oldItems,data]
@@ -31,7 +31,7 @@ function Colllections() {
         setData([])
         
         // sethandleModel(false)
-    }
+    // }
     sethandleModel(false)
     };
 
@@ -55,10 +55,14 @@ function Colllections() {
         if(isValid){
     
         setData((oldItems)=>{
+            if(name.length<1 || desc.length<1 || lang.length<1){
+                return oldItems;
+            }
+            else{
             return [...oldItems,name,desc,lang]
+            }
         })
         dispatch(EmptyState());
-        console.log("ho rha h")
         sethandleModel(true)
     }
         
@@ -145,7 +149,13 @@ function Colllections() {
 
     <div className="allCollections">      
     { comData.map((itemvalue,index)=>{
+     
+      if(itemvalue[2]===undefined){
+         return null;
+      }
+      else
      return <SingleColl key={index} id={index} name={itemvalue[0]} desc={itemvalue[1]} image={itemvalue[2]} onSelect={deleteItems} />
+        
      })}
      </div> 
       
